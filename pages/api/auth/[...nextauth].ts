@@ -2,7 +2,6 @@ import NextAuth from "next-auth"
 import Auth0Provider from "next-auth/providers/auth0"
 import { PrismaAdapter } from "@next-auth/prisma-adapter"
 import { PrismaClient } from "@prisma/client"
-
 const prisma = new PrismaClient()
 
 // For more information on each option (and a full list of options) go to
@@ -19,7 +18,7 @@ export default NextAuth({
       issuer: process.env.AUTH0_ISSUER_BASE_URL,
       domain: process.env.AUTH0_ISSUER_BASE_URL,
     }),
-   
+  
   ],
   // Database optional. MySQL, Maria DB, Postgres and MongoDB are supported.
   // https://next-auth.js.org/configuration/databases
